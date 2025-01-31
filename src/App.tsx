@@ -1,10 +1,15 @@
-import { Heading } from "@chakra-ui/react"
+import { Container } from "@chakra-ui/react"
+import { Navbar } from "@/components/navbar/Navbar"
 
 function App() {
   return (
-    <Heading fontFamily={'headings'} color='customOrange'>
-      Hello World
-    </Heading>
+    <Container
+      as="main"
+      minH="100dvh"
+      fontFamily='headings'
+    >
+      <Navbar />
+    </Container>
   )
 }
 
