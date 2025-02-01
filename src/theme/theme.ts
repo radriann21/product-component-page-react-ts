@@ -5,6 +5,7 @@ const config = defineConfig({
     tokens: {
       colors: {
         customOrange: { value: 'hsl(26, 100%, 55%)' },
+        customOrangeHover: { value: 'hsla(26, 100.00%, 55.10%, 0.71)' },
         paleOrange: { value: 'hsl(25, 100%, 94%)' },
         veryDarkBlue: { value: 'hsl(220, 13%, 13%)' },
         darkGrayishBlue: { value: 'hsl(219, 9%, 45%)' },

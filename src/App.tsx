@@ -1,5 +1,6 @@
 import { Container } from "@chakra-ui/react"
 import { Navbar } from "@/components/navbar/Navbar"
+import { ProductContainer } from "./components/product/ProductContainer"
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       fontFamily='headings'
     >
       <Navbar />
+      <ProductContainer />
     </Container>
   )
 }
