@@ -4,6 +4,7 @@ import { PopoverRoot, PopoverTrigger, PopoverContent, PopoverTitle, PopoverBody 
 import { EmptyState } from "@/components/ui/empty-state"
 import { ShoppingCart } from "lucide-react"
 import { CartStore } from "@/store/CartStore"
+import { ListOfProducts } from "./ListOfProducts"
 
 export const Cart = () => {
 
@@ -34,11 +35,15 @@ export const Cart = () => {
       </PopoverTrigger>
       <PopoverContent fontWeight='bold'>
         <PopoverTitle borderBottom='1px solid' borderBottomColor='grayishBlue' p='.8rem'>Cart</PopoverTitle>
-        <PopoverBody>
-          <EmptyState
-            title=""
-            description={totalElements > 0 ? 'si hay algo' : 'Your cart is empty.'}
-          />
+        <PopoverBody p=".8rem">
+          {
+            cart.length > 0
+              ? (<ListOfProducts />)
+              : <EmptyState
+                title=""
+                description={'Your cart is empty.'}
+              />
+          }
         </PopoverBody>
       </PopoverContent>
     </PopoverRoot>

@@ -9,6 +9,7 @@ type State = {
 type Actions = {
   addElementToCart: (product: Product) => void
   substractElementFromCart: (id: string) => void
+  removeElementFromCart: (id: string) => void
 }
 
 export const CartStore = create<State & Actions>((set) => ({
@@ -37,5 +38,12 @@ export const CartStore = create<State & Actions>((set) => ({
           : item
       })
       return { cart }
+    }),
+  removeElementFromCart: (id) =>
+    set((state) => {
+      const filteredCart = state.cart.filter((item) => {
+        return item.id !== id
+      })
+      return { cart: [...filteredCart] }
     })
 }));
