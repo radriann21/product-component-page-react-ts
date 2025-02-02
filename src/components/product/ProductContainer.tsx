@@ -12,11 +12,17 @@ export const ProductContainer = () => {
       maxW="full"
       h="100%"
       alignItems="center"
-      justifyContent="center"
-      flexDir={{ base: 'column', md: 'row' }}
+      justifyContent={"center"}
+      flexDir={{ base: 'column', lg: 'row' }}
     >
-      <Box as="section" w="50%">
-        <Image mx="auto" height="450px" rounded="lg" src={product.image.desktop} alt="the main sneaker" />
+      <Box as="section" w={{ base: '100%', lg: "50%" }}>
+        <Image
+          mx="auto"
+          height="450px"
+          rounded={{ base: 'none', lg: "lg" }}
+          src={product.image.desktop}
+          alt="the main sneaker"
+        />
       </Box>
       <ProductInfo />
     </Flex>

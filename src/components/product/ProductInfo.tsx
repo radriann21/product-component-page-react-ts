@@ -29,12 +29,12 @@ export const ProductInfo = () => {
   }
 
   return (
-    <Box as="section" w="50%">
-      <Box w="60%">
+    <Box as="section" w={{ base: "100%", lg: "50%" }} p={{ base: '1rem', md: "2rem", lg: '0' }}>
+      <Box w={{ base: "100%", xl: "60%" }} pt={{ base: '1rem', sm: '0' }}>
         <Text color="darkGrayishBlue" fontWeight="bold" textTransform="uppercase" letterSpacing="2px" mb=".5rem">
           {product.company}
         </Text>
-        <Heading color="veryDarkBlue" fontWeight="bold" fontSize="42px" lineHeight="3rem" mb="1.5rem">
+        <Heading color="veryDarkBlue" fontWeight="bold" fontSize="40px" lineHeight="3rem" mb="1.5rem">
           {product.name}
         </Heading>
         <Text color="darkGrayishBlue" fontSize="14px">
@@ -54,8 +54,15 @@ export const ProductInfo = () => {
           </Stat.HelpText>
         </Stat.Root>
       </Box>
-      <Flex w="60%" mt="2rem" spaceX="1rem">
-        <Flex w="40%" align="center" rounded="md" bgColor="lightGrayishBlue" justify="space-between">
+      <Flex
+        direction={{ base: 'column', lg: 'row' }}
+        w={{ base: "100%", lg: "60%" }}
+        spaceX={{ base: "0", lg: "1rem" }}
+        spaceY={{ base: '.5rem', lg: '0' }}
+        mt="2rem"
+        align="center"
+      >
+        <Flex w={{ base: "100%", lg: "40%" }} align="center" rounded="md" bgColor="lightGrayishBlue" justify="space-between">
           <Button onClick={() => substractElementFromCart(product.id)} bgColor="transparent" color="customOrange" fontWeight="bold" fontSize="18px" transition=".2s ease-in opacity" _hover={{ opacity: '.75' }}>
             -
           </Button>
@@ -64,7 +71,7 @@ export const ProductInfo = () => {
             +
           </Button>
         </Flex>
-        <Button onClick={handleAddToCart} w="60%" bgColor="customOrange" color="veryDarkBlue" fontWeight="bold" transition=".2s ease-in all" _hover={{ bgColor: 'customOrangeHover' }}>
+        <Button onClick={handleAddToCart} w={{ base: "100%", lg: "60%" }} bgColor="customOrange" color="veryDarkBlue" fontWeight="bold" transition=".2s ease-in all" _hover={{ bgColor: 'customOrangeHover' }}>
           <Icon>
             <ShoppingCart />
           </Icon>

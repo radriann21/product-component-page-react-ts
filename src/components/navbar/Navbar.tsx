@@ -8,7 +8,7 @@ export const Navbar = () => {
       as="header"
       w="full"
       py={{ base: "2rem", md: "4rem", }}
-      px={{ base: ".2rem", md: "2rem", xl: "4rem" }}
+      px={{ base: ".8rem", md: "2rem", xl: "4rem" }}
       justifyContent="space-between"
       alignItems="center"
     >
